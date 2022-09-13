@@ -8,10 +8,10 @@ $(document).ready(function () {
 
     "use strict";
 
-    if ($('.explorer-menu').length){
+    if ($('.explorer-menu').length) {
 
         //Open explorer menu
-        $('#explorer-trigger, #mobile-explorer-trigger').on('click', function(){
+        $('#explorer-trigger, #mobile-explorer-trigger').on('click', function () {
             $('.explorer-menu').toggleClass('is-active');
         });
 

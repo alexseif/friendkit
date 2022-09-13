@@ -23,7 +23,7 @@ var tour = {
             content: "Friendkit is built on top of Bulma 0.9.1, a very popular mobile first CSS framework.",
             target: document.querySelector("#made-with-bulma"),
             placement: "top",
-            xOffset : 40
+            xOffset: 40
         },
         {
             title: "Outstanding Features",
@@ -48,7 +48,7 @@ var tour = {
             content: "This is the main app layout, the navbar provides controls to manage content, user account, and notifications.",
             target: document.querySelector("#main-navbar"),
             placement: "bottom",
-            fixedElement : true,
+            fixedElement: true,
             xOffset: "center"
         },
         {
@@ -59,7 +59,7 @@ var tour = {
             fixedElement: true,
             xOffset: -5,
             onNext: function () {
-                setTimeout(function(){
+                setTimeout(function () {
                     $('.is-new-content').addClass('hopscotch-highlight');
                     $('.app-overlay').addClass('is-active');
                 }, 800);
@@ -151,7 +151,7 @@ var tour = {
 
 $(document).ready(function () {
 
-    $('#tour-start').on('click', function(){
+    $('#tour-start').on('click', function () {
         if (!hopscotch.isActive) {
             // Start the tour!
             hopscotch.startTour(tour, 0);
@@ -162,9 +162,7 @@ $(document).ready(function () {
 
     if (hopscotch.getState() === "hello-friendkit:4") {
         hopscotch.startTour(tour, 4);
-    }
-
-    else if (hopscotch.getState() === "hello-friendkit:10") {
+    } else if (hopscotch.getState() === "hello-friendkit:10") {
         hopscotch.startTour(tour, 10);
     }
 })

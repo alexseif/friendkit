@@ -9,24 +9,20 @@ $(document).ready(function () {
     "use strict";
 
     //Sidebar
-    if ($('.videos-sidebar').length){
+    if ($('.videos-sidebar').length) {
         $('.mobile-sidebar-trigger').on('click', function () {
             $('.videos-sidebar').addClass('is-active');
         })
-        $('.close-videos-sidebar').on('click', function(){
+        $('.close-videos-sidebar').on('click', function () {
             $(this).closest('.videos-sidebar').removeClass('is-active');
         })
 
         function handleMobileSidebar() {
             if (window.matchMedia("(max-width: 767px)").matches) {
                 $('.videos-sidebar').removeClass('is-active');
-            }
-
-            else if (window.matchMedia("(max-width: 768px)").matches) {
+            } else if (window.matchMedia("(max-width: 768px)").matches) {
                 $('.videos-sidebar').removeClass('is-active');
-            }
-
-            else {
+            } else {
                 $('.videos-sidebar').addClass('is-active');
             }
         }
@@ -38,8 +34,8 @@ $(document).ready(function () {
         })
     }
 
-    if ($('.related-side').length){
-        $('.related-trigger').on('click', function(){
+    if ($('.related-side').length) {
+        $('.related-trigger').on('click', function () {
             $('.related-side').addClass('is-opened');
         })
         $('.close-related-videos').on('click', function () {
@@ -68,10 +64,10 @@ $(document).ready(function () {
     }
 
     //Player page
-    if ($('.videos-wrapper.has-player').length){
+    if ($('.videos-wrapper.has-player').length) {
 
         //Expand video description
-        $('#description-show-more').on('click', function(){
+        $('#description-show-more').on('click', function () {
             $('.additional-description').slideToggle('fast');
             if ($(this).text() == 'Show More') {
                 $(this).html('Show Less')
@@ -81,7 +77,7 @@ $(document).ready(function () {
         })
 
         //Expand comments
-        $('.nested-replies .header').on('click', function(){
+        $('.nested-replies .header').on('click', function () {
             $(this).toggleClass('is-active');
             $(this).siblings('.nested-comments').slideToggle('fast');
         })

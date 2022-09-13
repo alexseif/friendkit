@@ -30,7 +30,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -101,7 +102,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -161,7 +163,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -220,7 +223,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -257,7 +261,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -294,7 +299,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -329,7 +335,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -345,37 +352,27 @@ $(document).ready(function () {
                         $('#mood-autocpl-wrapper').removeClass('is-hidden');
                         //Open autocomplete dropdown
                         openMoodDrop();
-                    }
-
-                    else if (newActivity === 'drinking') {
+                    } else if (newActivity === 'drinking') {
                         $('#activities-autocpl-wrapper, .is-activity').addClass('is-hidden');
                         $('#drinking-autocpl-wrapper').removeClass('is-hidden');
                         //Open autocomplete dropdown
                         openDrinksDrop();
-                    }
-
-                    else if (newActivity === 'eating') {
+                    } else if (newActivity === 'eating') {
                         $('#activities-autocpl-wrapper, .is-activity').addClass('is-hidden');
                         $('#eating-autocpl-wrapper').removeClass('is-hidden');
                         //Open autocomplete dropdown
                         openEatsDrop();
-                    }
-
-                    else if (newActivity === 'reading') {
+                    } else if (newActivity === 'reading') {
                         $('#activities-autocpl-wrapper, .is-activity').addClass('is-hidden');
                         $('#reading-autocpl-wrapper').removeClass('is-hidden');
                         //Open autocomplete dropdown
                         openReadsDrop();
-                    }
-
-                    else if (newActivity === 'watching') {
+                    } else if (newActivity === 'watching') {
                         $('#activities-autocpl-wrapper, .is-activity').addClass('is-hidden');
                         $('#watching-autocpl-wrapper').removeClass('is-hidden');
                         //Open autocomplete dropdown
                         openWatchDrop();
-                    }
-
-                    else if (newActivity === 'travelling') {
+                    } else if (newActivity === 'travelling') {
                         $('#activities-autocpl-wrapper, .is-activity').addClass('is-hidden');
                         $('#travel-autocpl-wrapper').removeClass('is-hidden');
                         //Open autocomplete dropdown
@@ -409,7 +406,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -468,7 +466,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -526,7 +525,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -584,7 +584,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -642,7 +643,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -700,7 +702,8 @@ $(document).ready(function () {
                 showAnimation: {
                     type: "fade", //normal|slide|fade
                     time: 400,
-                    callback: function () { }
+                    callback: function () {
+                    }
                 },
                 match: {
                     enabled: true
@@ -761,7 +764,7 @@ $(document).ready(function () {
                 var latlng = new google.maps.LatLng(lat, lng);
 
                 // http://stackoverflow.com/a/5341468
-                geocoder.geocode({ 'latLng': latlng }, function (results) {
+                geocoder.geocode({'latLng': latlng}, function (results) {
                     for (i = 0; i < results.length; i++) {
                         for (var j = 0; j < results[i].address_components.length; j++) {
                             for (var k = 0; k < results[i].address_components[j].types.length; k++) {

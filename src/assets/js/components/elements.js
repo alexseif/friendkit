@@ -24,7 +24,7 @@ $(document).ready(function () {
                 // Older browser without pushState might flicker here, as they momentarily
                 // jump to the wrong position (IE < 10)
                 if ($target.length) {
-                    $('html, body').animate({ scrollTop: $target.offset().top - fromTop - 20 });
+                    $('html, body').animate({scrollTop: $target.offset().top - fromTop - 20});
                     if (history && "pushState" in history) {
                         history.pushState({}, document.title, window.location.pathname + href);
                         return false;
@@ -39,14 +39,14 @@ $(document).ready(function () {
         // Intercept all anchor clicks
         $("body").on("click", ".submenu-wrap a", scroll_if_anchor);
 
-        $('.element-menu .menu-trigger').on('click', function(){
+        $('.element-menu .menu-trigger').on('click', function () {
             $(this).closest('.element-menu').siblings('.element-menu').find('.menu-trigger').removeClass('is-active');
             $(this).closest('.element-menu').siblings('.element-menu').find('.submenu-wrap').slideUp();
             $(this).toggleClass('is-active');
             $(this).siblings('.submenu-wrap').slideToggle('fast');
         })
 
-        $('.submenu-wrap li a').on('click', function(){
+        $('.submenu-wrap li a').on('click', function () {
             $('.submenu-wrap li a').removeClass('is-active');
             $(this).addClass('is-active');
         })
@@ -68,7 +68,7 @@ $(document).ready(function () {
                 var albumsModal = $this.attr('data-modal');
                 $this.closest('.modal').removeClass('is-active');
                 $('#' + albumsModal).addClass('is-active');
-                setTimeout(function(){
+                setTimeout(function () {
                     $this.closest('.card-body').find('.content-block, .dot').toggleClass('is-active');
                     $this.text('Next').off();
                     albumsHelp();
@@ -103,9 +103,9 @@ $(document).ready(function () {
 
 
         //Lightbox
-        $('.lightbox-trigger, .close-lightbox').on('click', function(){
+        $('.lightbox-trigger, .close-lightbox').on('click', function () {
             $('.custom-profile-lightbox').toggleClass('is-active');
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.image-loader, .comments-loader').toggleClass('is-active');
             }, 1200)
         })
@@ -413,7 +413,7 @@ $(document).ready(function () {
                     var self = this;
                     var $btn = self.$btn;
 
-                    $.fancybox.open({ src: $btn.data("src") || $btn.attr("href") }, self.opts);
+                    $.fancybox.open({src: $btn.data("src") || $btn.attr("href")}, self.opts);
                 };
 
                 Morphing.prototype.close = function () {

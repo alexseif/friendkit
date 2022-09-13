@@ -4,7 +4,7 @@
 Widgets js file
 ========================================================================== */
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     "use strict";
 
@@ -64,8 +64,7 @@ $(document).ready(function(){
             }, 155);
         });
 
-        Array.from(document.querySelectorAll('[data-day]')).
-        forEach(function (day) {
+        Array.from(document.querySelectorAll('[data-day]')).forEach(function (day) {
             var selector = '.schedule .schedule-calendar .calendar-row .day.event[data-day="' +
                 day.dataset.day + '"]:before';
             var colorClass = headerDotClasses.filter(function (c) {
@@ -106,7 +105,7 @@ $(document).ready(function(){
 
                 // Just above the bottom of the header
                 // Math done from the vars in the stylus
-                var endPos = { x: 55, y: 166 };
+                var endPos = {x: 55, y: 166};
 
                 style.innerHTML =
                     selector + ' {\n            top: ' +
@@ -115,9 +114,8 @@ $(document).ready(function(){
 
                     selector + ' {\n            transform: translate(\n              ' + (
 
-                    String(endPos.x - _.target.offsetLeft) + 'px') + ',\n              ' + (
-                    String(endPos.y - _.target.offsetTop) + 'px') + '\n            )\n        }';
-
+                        String(endPos.x - _.target.offsetLeft) + 'px') + ',\n              ' + (
+                        String(endPos.y - _.target.offsetTop) + 'px') + '\n            )\n        }';
 
 
                 setTimeout(function () {
@@ -134,7 +132,7 @@ $(document).ready(function(){
             });
         });
 
-        $('.next-fab').on('click', function(){
+        $('.next-fab').on('click', function () {
             $(this).toggleClass('is-toggled');
             $('.schedule-events').slideToggle();
         })
@@ -179,9 +177,7 @@ $(document).ready(function(){
                         timeout: 1800,
                         zindex: 99999,
                     });
-                }
-
-                else {
+                } else {
                     iziToast.show({
                         maxWidth: '280px',
                         class: 'success-toast',

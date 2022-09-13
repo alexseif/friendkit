@@ -1,4 +1,3 @@
-
 !function ($) {
 
     "use strict"; // jshint ;_;
@@ -24,11 +23,12 @@
                 eventIn = this.options.trigger == 'hover' ? 'mouseenter' : 'focus';
                 eventOut = this.options.trigger == 'hover' ? 'mouseleave' : 'blur';
                 this.$element.on(eventIn + '.' + this.type, this.options.selector, $.proxy(this.enter, this))
-                this.$element.on(eventOut + '.' + this.type, this.options.selector, $.proxy(this.leave, this));;
+                this.$element.on(eventOut + '.' + this.type, this.options.selector, $.proxy(this.leave, this));
+                ;
             }
 
             this.options.selector ?
-                (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' })) :
+                (this._options = $.extend({}, this.options, {trigger: 'manual', selector: ''})) :
                 this.fixTitle();
         },
 
@@ -94,7 +94,7 @@
 
                 $tip
                     .detach()
-                    .css({ top: 0, left: 0, display: 'block' })
+                    .css({top: 0, left: 0, display: 'block'})
                     .insertAfter(this.$element);
 
                 pos = this.getPosition(inside);
@@ -104,16 +104,16 @@
 
                 switch (inside ? placement.split(' ')[1] : placement) {
                     case 'bottom':
-                        tp = { top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2 }
+                        tp = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}
                         break;
                     case 'top':
-                        tp = { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 }
+                        tp = {top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2}
                         break;
                     case 'left':
-                        tp = { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth }
+                        tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth}
                         break;
                     case 'right':
-                        tp = { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width }
+                        tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}
                         break;
                 }
 
@@ -127,7 +127,11 @@
         setContent: function () {
             var $tip = this.tip(), title = this.getTitle();
 
-            $tip.find('.ggtooltip-inner').css({ 'background': this.options.backcolor, 'color': this.options.textcolor, 'border-color': this.options.bordercolor });
+            $tip.find('.ggtooltip-inner').css({
+                'background': this.options.backcolor,
+                'color': this.options.textcolor,
+                'border-color': this.options.bordercolor
+            });
             $tip.find('.ggtooltip-arrow').css('border-' + this.options.placement + '-color', this.options.backcolor);
             $tip.find('.ggtooltip-arrow-shadow').css('border-' + this.options.placement + '-color', this.options.bordercolor);
             $tip.find('.ggtooltip-inner')[this.options.html ? 'html' : 'text'](title);
@@ -170,7 +174,7 @@
         },
 
         getPosition: function (inside) {
-            return $.extend({}, (inside ? { top: 0, left: 0 } : this.$element.offset()), {
+            return $.extend({}, (inside ? {top: 0, left: 0} : this.$element.offset()), {
                 width: this.$element[0].offsetWidth
                 , height: this.$element[0].offsetHeight
             });

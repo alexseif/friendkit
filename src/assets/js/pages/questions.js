@@ -81,21 +81,21 @@ $(document).ready(function () {
 
     //Question home tabs
     if ($('.question-tabs').length) {
-        $('.question-tabs ul li').on('click', function(){
+        $('.question-tabs ul li').on('click', function () {
             $(this).siblings('li').removeClass('is-active');
             $(this).addClass('is-active');
         })
     }
 
     //Hide achievements loader
-    if ($('.achievements-loader').length){
-        setTimeout(function(){
+    if ($('.achievements-loader').length) {
+        setTimeout(function () {
             $('.achievements-loader').removeClass('is-active');
         }, 4000);
     }
 
     //Achievements
-    if ($('.achievements-carousel').length){
+    if ($('.achievements-carousel').length) {
         //Init product carousel
         $('.achievements-carousel').slick({
             slidesToShow: 3,
@@ -143,8 +143,8 @@ $(document).ready(function () {
     }
 
     //Settings toasts
-    if ($('.questions-settings').length){
-        $('.switch-block .f-switch input').on('change', function(){
+    if ($('.questions-settings').length) {
+        $('.switch-block .f-switch input').on('change', function () {
             toasts.service.info('', 'mdi mdi-progress-check', 'Settings saved successfully', 'bottomRight', 2500);
         })
     }

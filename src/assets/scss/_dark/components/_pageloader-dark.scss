@@ -13,9 +13,9 @@ Pageloader styles
 ========================================================================== */
 
 body {
-    &.is-dark {
-        .pageloader, .infraloader {
-            background: lighten($dark, 8%);
-        }
+  &.is-dark {
+    .pageloader, .infraloader {
+      background: lighten($dark, 8%);
     }
+  }
 }

@@ -30,13 +30,15 @@ if ($('.modal-uploader').length) {
         clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
     });
 
-    modalUploader.on("addedfile", function(file) {
+    modalUploader.on("addedfile", function (file) {
         //Get the file count
-        var count= modalUploader.files.length;
+        var count = modalUploader.files.length;
         //Update global count variable
         uploadCount = uploadCount + 1;
         // Hookup the start button
-        file.previewElement.querySelector(".start").onclick = function() { modalUploader.enqueueFile(file); };
+        file.previewElement.querySelector(".start").onclick = function () {
+            modalUploader.enqueueFile(file);
+        };
         file.previewElement.id = 'uploaded-file-' + uploadCount;
         file.previewElement.querySelector("textarea").setAttribute('name', 'uploaded_file_textarea_' + uploadCount);
         file.previewElement.querySelector("textarea").id = 'uploaded-file-textarea-' + uploadCount;
@@ -44,19 +46,19 @@ if ($('.modal-uploader').length) {
         $('#modal-uploader-file-count').html(count);
     });
 
-    modalUploader.on("removedfile", function(file) {
+    modalUploader.on("removedfile", function (file) {
         //Get the file count
-        var count= modalUploader.files.length;
+        var count = modalUploader.files.length;
         //Set the new file count
         $('#modal-uploader-file-count').html(count);
     });
 
     // Update the total progress bar
-    modalUploader.on("totaluploadprogress", function(progress) {
+    modalUploader.on("totaluploadprogress", function (progress) {
         document.querySelector("#total-progress .progress-bar").style.width = progress + "%";
     });
 
-    modalUploader.on("sending", function(file) {
+    modalUploader.on("sending", function (file) {
         // Show the total progress bar when upload starts
         document.querySelector("#total-progress").style.opacity = "1";
         // And disable the start button
@@ -64,17 +66,17 @@ if ($('.modal-uploader').length) {
     });
 
     // Hide the total progress bar when nothing's uploading anymore
-    modalUploader.on("queuecomplete", function(progress) {
+    modalUploader.on("queuecomplete", function (progress) {
         document.querySelector("#total-progress").style.opacity = "0";
     });
 
     // Setup the buttons for all transfers
     // The "add files" button doesn't need to be setup because the config
     // `clickable` has already been specified.
-    document.querySelector("#actions .start").onclick = function() {
+    document.querySelector("#actions .start").onclick = function () {
         modalUploader.enqueueFiles(modalUploader.getFilesWithStatus(Dropzone.ADDED));
     };
-    document.querySelector("#actions .cancel").onclick = function() {
+    document.querySelector("#actions .cancel").onclick = function () {
         modalUploader.removeAllFiles(true);
     };
 
@@ -85,7 +87,7 @@ if ($('.modal-uploader').length) {
         timeBetweenSteps = 100,
         bytesPerStep = 100000;
 
-    modalUploader.uploadFiles = function(files) {
+    modalUploader.uploadFiles = function (files) {
         var self = this;
 
         for (var i = 0; i < files.length; i++) {
@@ -95,8 +97,8 @@ if ($('.modal-uploader').length) {
 
             for (var step = 0; step < totalSteps; step++) {
                 var duration = timeBetweenSteps * (step + 1);
-                setTimeout(function(file, totalSteps, step) {
-                    return function() {
+                setTimeout(function (file, totalSteps, step) {
+                    return function () {
                         file.upload = {
                             progress: 100 * (step + 1) / totalSteps,
                             total: file.size,

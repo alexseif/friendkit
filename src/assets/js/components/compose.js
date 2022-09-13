@@ -9,56 +9,56 @@ Functions
 //The following functions help trigger the autocompletes dropdowns
 
 function openFriendsDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#feed-users-autocpl").focus();
     $("#feed-users-autocpl").attr('value', '');
     $("#feed-users-autocpl").triggerHandler(e);
 };
 
 function openActivitiesDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#activities-autocpl").focus();
     $("#activities-autocpl").attr('value', '');
     $("#activities-autocpl").triggerHandler(e);
 };
 
 function openMoodDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#mood-autocpl").focus();
     $("#mood-autocpl").attr('value', '');
     $("#mood-autocpl").triggerHandler(e);
 };
 
 function openDrinksDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#drinking-autocpl").focus();
     $("#drinking-autocpl").attr('value', '');
     $("#drinking-autocpl").triggerHandler(e);
 };
 
 function openEatsDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#eating-autocpl").focus();
     $("#eating-autocpl").attr('value', '');
     $("#eating-autocpl").triggerHandler(e);
 };
 
 function openReadsDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#reading-autocpl").focus();
     $("#reading-autocpl").attr('value', '');
     $("#reading-autocpl").triggerHandler(e);
 };
 
 function openWatchDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#watching-autocpl").focus();
     $("#watching-autocpl").attr('value', '');
     $("#watching-autocpl").triggerHandler(e);
 };
 
 function openTravelDrop() {
-    var e = $.Event("keyup", { keyCode: 65, which: 65 });
+    var e = $.Event("keyup", {keyCode: 65, which: 65});
     $("#travel-autocpl").focus();
     $("#travel-autocpl").attr('value', '');
     $("#travel-autocpl").triggerHandler(e);
@@ -82,11 +82,11 @@ function readURL(input) {
             $('#feed-upload').append(template);
             $('#feed-upload-input-1, #feed-upload-input-2').attr('disabled', true);
 
-            $('.remove-file').on('click', function(){
+            $('.remove-file').on('click', function () {
                 $('#feed-upload-input-1, #feed-upload-input-2').val('').attr('disabled', false);
                 $(this).closest('.upload-wrap').remove();
             });
-            
+
         }
         reader.readAsDataURL(input.files[0]);
     }

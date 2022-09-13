@@ -4,11 +4,11 @@
 Landing page functions
 ========================================================================== */
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     "use strict";
 
-    if ($('.landing-wrapper').length){
+    if ($('.landing-wrapper').length) {
 
         function scroll_if_anchor(href) {
             href = typeof (href) == "string" ? href : $(this).attr("href");
@@ -24,7 +24,7 @@ $(document).ready(function(){
                 // Older browser without pushState might flicker here, as they momentarily
                 // jump to the wrong position (IE < 10)
                 if ($target.length) {
-                    $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+                    $('html, body').animate({scrollTop: $target.offset().top - fromTop});
                     if (history && "pushState" in history) {
                         history.pushState({}, document.title, window.location.pathname + href);
                         return false;
@@ -48,7 +48,7 @@ $(document).ready(function(){
             distance: '20px',
             duration: 600,
             delay: 300,
-            rotate: { x: 0, y: 0, z: 0 },
+            rotate: {x: 0, y: 0, z: 0},
             opacity: 0,
             scale: 1,
             easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
@@ -66,7 +66,7 @@ $(document).ready(function(){
             distance: '20px',
             duration: 600,
             delay: 100,
-            rotate: { x: 0, y: 0, z: 0 },
+            rotate: {x: 0, y: 0, z: 0},
             opacity: 0,
             scale: 1,
             easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',

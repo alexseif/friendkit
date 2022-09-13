@@ -41,5 +41,4 @@ function initNavbar() {
 $(document).ready(function () {
 
 
-
 })

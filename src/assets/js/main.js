@@ -8,7 +8,7 @@ Main js file
 
 //Set environment variable (Used for development)
 
-/* 
+/*
     Possible values:
     1. development
     2. ''
@@ -19,10 +19,10 @@ var env = '';
 //Pageloader
 initPageloader();
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     if (env === 'development') {
-		//Demo images
+        //Demo images
         changeDemoHrefs();
 
         //Demo hrefs
@@ -32,32 +32,32 @@ $(document).ready(function(){
     //Lazy Load
     const el = document.querySelectorAll('[data-lazy-load]');
     const observer = lozad(el, {
-        loaded: function(el) {
+        loaded: function (el) {
             // Custom implementation on a loaded element
             el.parentNode.classList.add('loaded');
         }
-	});
-	
+    });
+
     observer.observe();
 
     //Demo links
-    $('.demo-link a').on('click', function(e){
+    $('.demo-link a').on('click', function (e) {
         e.preventDefault();
         var theme = $(this).closest('.demo-link').attr('data-theme');
         window.localStorage.setItem('theme', theme);
         var href = $(this).attr('href');
-        
+
         window.open(href);
     });
-    
+
     //Toggle Dark mode
-    toggleTheme(); 
+    toggleTheme();
 
     //Code highlight init
     $('.highlight-block code').each(function (i, block) {
         hljs.highlightBlock(block);
     });
-    
+
     //Init navbar v1
     initNavbar();
 
@@ -115,7 +115,7 @@ $(document).ready(function(){
     initSimplePopover();
 
     //Share modal demo
-    initShareModal();   
+    initShareModal();
 
     //Users autocomplete
     initUsersAutocomplete();

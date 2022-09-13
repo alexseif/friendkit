@@ -4,7 +4,7 @@
 Fancybox functions
 ========================================================================== */
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     "use strict";
 
@@ -1707,8 +1707,8 @@ $(document).ready(function(){
             </div>
         `
 
-        $('[data-fancybox]').each(function(){
-            if (($(this).attr('data-lightbox-type')) == 'comments'){
+        $('[data-fancybox]').each(function () {
+            if (($(this).attr('data-lightbox-type')) == 'comments') {
                 var lightboxContent = $(this).attr('data-fancybox');
                 console.log(lightboxContent);
                 $(this).fancybox({
@@ -1716,7 +1716,7 @@ $(document).ready(function(){
                     keyboard: false,
                     infobar: false,
                     touch: {
-                    vertical: false
+                        vertical: false
                     },
                     buttons: [
                         "close",
@@ -1729,31 +1729,25 @@ $(document).ready(function(){
                     idleTime: false,
                     gutter: 0,
                     // Customize caption area
-                    caption: function(instance) {
+                    caption: function (instance) {
                         if (lightboxContent == 'post1') {
                             return lightboxComments1;
-                        }
-                        else if (lightboxContent == 'post2') {
+                        } else if (lightboxContent == 'post2') {
                             return lightboxComments2;
-                        }
-                        else if (lightboxContent == 'post3') {
+                        } else if (lightboxContent == 'post3') {
                             return lightboxComments3;
-                        }
-                        else if (lightboxContent == 'profile-post1') {
+                        } else if (lightboxContent == 'profile-post1') {
                             return profileLightbox1;
-                        }
-                        else if (lightboxContent == 'profile-post2') {
+                        } else if (lightboxContent == 'profile-post2') {
                             return profileLightbox2;
-                        }
-                        else if (lightboxContent == 'profile-post3') {
+                        } else if (lightboxContent == 'profile-post3') {
                             return profileLightbox3;
-                        }
-                        else if (lightboxContent == 'profile-post4') {
+                        } else if (lightboxContent == 'profile-post4') {
                             return profileLightbox4;
                         }
 
                     },
-                    afterShow : function( instance, current ) {
+                    afterShow: function (instance, current) {
                         initDropdowns();
 
                         initLightboxEmojis();
@@ -1761,7 +1755,7 @@ $(document).ready(function(){
                         if (env === 'development') {
                             changeLightboxImages();
                         }
-                        
+
                     }
                 });
             }

@@ -11,9 +11,9 @@ $(document).ready(function () {
     if ($('#activity-feed').length) {
 
         //Feed v1 left menu
-        if ($('.feed-menu-v1').length){
+        if ($('.feed-menu-v1').length) {
             $('.feed-menu-v1 .main-menu li.is-active').find('.submenu').slideDown();
-            $('.feed-menu-v1 .main-menu li').on('click', function(){
+            $('.feed-menu-v1 .main-menu li').on('click', function () {
                 //$('.submenu').slideUp();
                 $(this).siblings('li').removeClass('is-active').find('.submenu').slideUp();
                 $(this).addClass('is-active').find('.submenu').slideDown();
@@ -21,7 +21,7 @@ $(document).ready(function () {
         }
     }
 
-    if ($('#share-modal').length){
+    if ($('#share-modal').length) {
         //Share modal main dropdown
         $('.share-dropdown').on('click', function () {
             $(this).toggleClass('is-active');
@@ -72,24 +72,24 @@ $(document).ready(function () {
             prevArrow: "<div class='slick-custom is-prev'><i class='mdi mdi-chevron-left'></i></div>",
             nextArrow: "<div class='slick-custom is-next'><i class='mdi mdi-chevron-right'></i></div>",
             responsive: [
-              {
-                breakpoint: 768,
-                settings: {
-                  arrows: false,
-                  centerMode: true,
-                  centerPadding: '40px',
-                  slidesToShow: 3
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
                 }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  arrows: false,
-                  centerMode: true,
-                  centerPadding: '40px',
-                  slidesToShow: 1
-                }
-              }
             ]
         });
     }

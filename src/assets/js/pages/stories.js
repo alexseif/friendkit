@@ -85,24 +85,20 @@ function initAutoTag() {
 $(document).ready(function () {
 
     //Sidebar
-    if ($('.stories-sidebar').length){
+    if ($('.stories-sidebar').length) {
         $('.mobile-sidebar-trigger').on('click', function () {
             $('.stories-sidebar').addClass('is-active');
         })
-        $('.close-stories-sidebar').on('click', function(){
+        $('.close-stories-sidebar').on('click', function () {
             $(this).closest('.stories-sidebar').removeClass('is-active');
         })
 
         function handleMobileSidebar() {
             if (window.matchMedia("(max-width: 767px)").matches) {
                 $('.stories-sidebar').removeClass('is-active');
-            }
-
-            else if (window.matchMedia("(max-width: 768px)").matches) {
+            } else if (window.matchMedia("(max-width: 768px)").matches) {
                 $('.stories-sidebar').removeClass('is-active');
-            }
-
-            else {
+            } else {
                 $('.stories-sidebar').addClass('is-active');
             }
         }
@@ -122,7 +118,7 @@ $(document).ready(function () {
     })
 
     function deletePreview() {
-        $('.delete-preview-item').off().on('click', function() {
+        $('.delete-preview-item').off().on('click', function () {
             $('.preview-image-container').remove();
             $('.upload-placeholder, .image-upload-placeholder').removeClass('is-hidden');
             $('#story-upload, #image-story-upload').val('');
@@ -138,7 +134,7 @@ $(document).ready(function () {
                 document.getElementById('story-upload').value = null;
             } else {
                 fileReader.onload = function () {
-                    var blob = new Blob([fileReader.result], { type: file.type });
+                    var blob = new Blob([fileReader.result], {type: file.type});
                     var url = URL.createObjectURL(blob);
                     var video = document.createElement('video');
                     var timeupdate = function () {
@@ -205,7 +201,7 @@ $(document).ready(function () {
                     deletePreview();
                 };
                 fileReader.readAsDataURL(file);
-                
+
             } else {
                 toasts.service.info('', 'mdi mdi-image-outline', 'Please upload an image', 'bottomRight', 2500);
                 document.getElementById('image-story-upload').value = null;

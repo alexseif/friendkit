@@ -4,7 +4,7 @@
 Profile js file
 ========================================================================== */
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     "use strict";
 
@@ -91,8 +91,7 @@ $(document).ready(function(){
                     zindex: 99999,
                 });
             }
-        }
-        else if ($(this).attr('id') == 'invite-pop') {
+        } else if ($(this).attr('id') == 'invite-pop') {
             if ($(this).hasClass('is-shifted')) {
                 $(this).removeClass('is-shifted');
                 iziToast.show({
@@ -132,8 +131,7 @@ $(document).ready(function(){
                     zindex: 99999,
                 });
             }
-        }
-        else if ($(this).attr('id') == 'chat-pop') {
+        } else if ($(this).attr('id') == 'chat-pop') {
             $('.chat-wrapper').toggleClass('is-active');
             $('body').toggleClass('is-frozen');
         }
@@ -175,8 +173,7 @@ $(document).ready(function(){
                 }
 
                 reader.readAsDataURL(input.files[0]);
-            }
-            else {
+            } else {
                 swal("Sorry - you're browser doesn't support the FileReader API");
             }
         }
@@ -259,8 +256,7 @@ $(document).ready(function(){
                 }
 
                 reader.readAsDataURL(input.files[0]);
-            }
-            else {
+            } else {
                 swal("Sorry - you're browser doesn't support the FileReader API");
             }
         }
@@ -336,7 +332,7 @@ $(document).ready(function(){
         initPostComments();
 
         //Star friends widget
-        $('.star-friend').on('click', function(){
+        $('.star-friend').on('click', function () {
             $(this).toggleClass('is-active');
         })
     }
@@ -345,7 +341,7 @@ $(document).ready(function(){
     if ($('#profile-about').length) {
 
         //Vertical tabs
-        $('.left-menu .menu-item').on('click', function(){
+        $('.left-menu .menu-item').on('click', function () {
             var targetContent = $(this).attr('data-content');
             $('.left-menu .menu-item').removeClass('is-active');
             $(this).addClass('is-active');
@@ -359,7 +355,7 @@ $(document).ready(function(){
         })
 
         //Mini like button
-        $('.small-like .inner').on('click', function(){
+        $('.small-like .inner').on('click', function () {
             $(this).closest('.small-like').toggleClass('is-active');
         })
 
@@ -371,8 +367,8 @@ $(document).ready(function(){
     if ($('#profile-photos, #pages-photos').length) {
 
         //Like a photo
-        $('.photo-like').on('click', function(){
-            if ($(this).hasClass('is-liked')){
+        $('.photo-like').on('click', function () {
+            if ($(this).hasClass('is-liked')) {
                 $(this).find('svg').removeClass('gelatine');
             } else {
                 $(this).find('svg').addClass('gelatine');
@@ -381,7 +377,7 @@ $(document).ready(function(){
         })
 
         //Open photo lightbox
-        $('.image-grid .image-row > div .overlay').on('click', function(){
+        $('.image-grid .image-row > div .overlay').on('click', function () {
             var $this = $(this);
             var imageSrc = $this.closest('.image-row > div').attr('data-background');
             var avatarSrc = $this.siblings('.image-owner').find('img').attr('src');
@@ -393,7 +389,7 @@ $(document).ready(function(){
             $('#lightbox-time').html(timeStamp);
             $('.custom-profile-lightbox').addClass('is-active');
             //Simulate loading
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.custom-profile-lightbox').find('.image-loader, .comments-loader').removeClass('is-active');
             }, 1000)
         })

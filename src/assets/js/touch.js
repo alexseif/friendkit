@@ -45,7 +45,7 @@ $(document).ready(function () {
     //Videos
     var videoHammer;
 
-    function closeTouchVideoSidebar(){
+    function closeTouchVideoSidebar() {
 
         // Get a reference to an element.
         var videoWrapper = document.querySelector('.videos-wrapper');
@@ -70,18 +70,15 @@ $(document).ready(function () {
     if ($('.videos-sidebar').length) {
         if (window.matchMedia("(max-width: 767px)").matches) {
             closeTouchVideoSidebar()
-        }
-        else if (window.matchMedia("(max-width: 768px)").matches) {
+        } else if (window.matchMedia("(max-width: 768px)").matches) {
             if (window.matchMedia("(orientation: portrait)").matches) {
                 closeTouchVideoSidebar()
-            }
-            else {
+            } else {
                 if (videoHammer !== undefined) {
                     videoHammer.destroy();
                 }
             }
-        }
-        else {
+        } else {
             if (videoHammer !== undefined) {
                 videoHammer.destroy();
             }
@@ -90,18 +87,15 @@ $(document).ready(function () {
         $(window).on('resize', function () {
             if (window.matchMedia("(max-width: 767px)").matches) {
                 closeTouchVideoSidebar()
-            }
-            else if (window.matchMedia("(max-width: 768px)").matches) {
+            } else if (window.matchMedia("(max-width: 768px)").matches) {
                 if (window.matchMedia("(orientation: portrait)").matches) {
                     closeTouchVideoSidebar()
-                }
-                else {
+                } else {
                     if (videoHammer !== undefined) {
                         videoHammer.destroy();
                     }
                 }
-            }
-            else {
+            } else {
                 if (videoHammer !== undefined) {
                     videoHammer.destroy();
                 }

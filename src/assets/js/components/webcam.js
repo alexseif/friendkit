@@ -8,10 +8,10 @@ Live video functions
 
 
 //Get user media
-navigator.getUserMedia = ( navigator.getUserMedia ||
-                          navigator.webkitGetUserMedia ||
-                          navigator.mozGetUserMedia ||
-                          navigator.msGetUserMedia);
+navigator.getUserMedia = (navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia ||
+    navigator.msGetUserMedia);
 
 var video;
 var webcamStream;
@@ -23,8 +23,7 @@ var liveIndicator = document.getElementById('live-indicator');
 
 function startWebcam() {
     if (navigator.getUserMedia) {
-        navigator.getUserMedia (
-
+        navigator.getUserMedia(
             // constraints
             {
                 video: true,
@@ -32,7 +31,7 @@ function startWebcam() {
             },
 
             // successCallback
-            function(localMediaStream) {
+            function (localMediaStream) {
                 video = document.querySelector('video');
                 try {
                     video.srcObject = localMediaStream;
@@ -45,7 +44,7 @@ function startWebcam() {
             },
 
             // errorCallback
-            function(err) {
+            function (err) {
                 console.log("The following error occured: " + err);
             }
         );

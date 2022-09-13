@@ -24,21 +24,13 @@ $(document).ready(function () {
 
         if (stepValue == '0') {
             $('#signup-panel-1, #step-title-1').addClass('is-active');
-        }
-
-        else if (stepValue == '25') {
+        } else if (stepValue == '25') {
             $('#signup-panel-2, #step-title-2').addClass('is-active');
-        }
-
-        else if (stepValue == '50') {
+        } else if (stepValue == '50') {
             $('#signup-panel-3, #step-title-3').addClass('is-active');
-        }
-
-        else if (stepValue == '75') {
+        } else if (stepValue == '75') {
             $('#signup-panel-4, #step-title-4').addClass('is-active');
-        }
-
-        else if (stepValue == '100') {
+        } else if (stepValue == '100') {
             $('#signup-panel-5, #step-title-5').addClass('is-active');
         }
     })
@@ -65,7 +57,8 @@ $(document).ready(function () {
                 });
                 if (this.files[1] != null) {
                     this.removeFile(this.files[0]);
-                };
+                }
+                ;
             },
             transformFile: function (file, done) {
                 $('#crop-modal').addClass('is-active');
@@ -171,7 +164,7 @@ $(document).ready(function () {
                 editor.appendChild(image);
 
                 // Create Cropper.js
-                var cropper = new Cropper(image, { aspectRatio: 1 });
+                var cropper = new Cropper(image, {aspectRatio: 1});
             },
         });
     }

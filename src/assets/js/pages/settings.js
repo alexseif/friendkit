@@ -22,13 +22,9 @@ $(document).ready(function () {
             function handleMobileSidebar() {
                 if (window.matchMedia("(max-width: 767px)").matches) {
                     $('.settings-sidebar').removeClass('is-active');
-                }
-
-                else if (window.matchMedia("(max-width: 768px)").matches) {
+                } else if (window.matchMedia("(max-width: 768px)").matches) {
                     $('.settings-sidebar').removeClass('is-active');
-                }
-
-                else {
+                } else {
                     $('.settings-sidebar').addClass('is-active');
                 }
             }
@@ -72,7 +68,8 @@ $(document).ready(function () {
                     showAnimation: {
                         type: "fade", //normal|slide|fade
                         time: 400,
-                        callback: function () { }
+                        callback: function () {
+                        }
                     },
                     match: {
                         enabled: true

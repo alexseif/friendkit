@@ -4,13 +4,13 @@
 News pages js file
 ========================================================================== */
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     "use strict";
 
     if ($('#news-layout').length) {
         //Top Stories
-        $('.stories .story').on('click', function(){
+        $('.stories .story').on('click', function () {
             var targetStory = $(this).attr('data-story');
             $(this).siblings('.story').removeClass('is-active');
             $(this).addClass('is-active');
@@ -19,8 +19,8 @@ $(document).ready(function(){
         })
 
         //Card actions
-        $('.news-card .action.is-like').on('click', function(){
-            if ($(this).hasClass('is-active')){
+        $('.news-card .action.is-like').on('click', function () {
+            if ($(this).hasClass('is-active')) {
                 $(this).removeClass('is-active');
                 $(this).find('svg').removeClass('gelatine');
             } else {

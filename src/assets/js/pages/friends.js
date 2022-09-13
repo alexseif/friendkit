@@ -4,11 +4,11 @@
 Friends page js file
 ========================================================================== */
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     "use strict";
 
-    if ($('#friends-page').length){
+    if ($('#friends-page').length) {
 
         //Hide loader
         $('.subloader').removeClass('is-active');
@@ -31,12 +31,12 @@ $(document).ready(function(){
         initTextFilter();
 
         //Friend menu tabs
-        $('.option-tabs.is-friends .option-tab').on('click', function(){
+        $('.option-tabs.is-friends .option-tab').on('click', function () {
             callLoader(800);
             var targetTab = $(this).attr('data-tab');
             $(this).siblings('.option-tab').removeClass('is-active');
             $(this).addClass('is-active');
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.card-row-wrap').removeClass('is-active');
                 $('#' + targetTab).addClass('is-active');
             }, 200)
@@ -48,9 +48,9 @@ $(document).ready(function(){
         })
 
         //Call loader
-        function callLoader(t){
+        function callLoader(t) {
             $('.subloader').addClass('is-active');
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.subloader').removeClass('is-active');
             }, t)
         }
